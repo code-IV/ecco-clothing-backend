@@ -69,3 +69,6 @@ typings/
 # Editor specific files (e.g., Sublime Text)
 *.sublime-project
 *.sublime-workspace
+
+# Temporary files
+uploads/

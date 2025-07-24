@@ -1,11 +1,12 @@
 //-/database.js
-
 const mysql = require('mysql2');
+require('dotenv').config(); // Load .env variables
+
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rootdb',
-  database: 'ecco_clothing'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE
 });
 
 db.connect((err) => {
